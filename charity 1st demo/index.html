@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Chairity website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+  }
+  #about{
+      padding:20px;
+
+  }
+  
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 500px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: rgb(248, 245, 245);
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #f5c668;
+    border: 0;
+    font-size: 15px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+    width:auto;
+  }
+  .navbar li{
+      color: #000;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    background-color: rgb(250, 230, 143);
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  .slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+.contact-section{
+	width: 200;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  
+  background-color: #f5c668;
+
+}
+
+.contact-info{
+	color:  rgb(14, 13, 13);
+	max-width: 500px;
+	line-height: 65px;
+	padding-left: 50px;
+	font-size: 18px;
+}
+
+.contact-info i{
+	margin: 20px;
+	font-size: 25px;
+  background-color: #f5c668;
+
+}
+
+.contact-form{
+	max-width: 900px;
+	margin-right: 50px;
+  margin-top: 20px;
+  margin-bottom:30px;
+  
+}
+
+.contact-info, .contact-form{
+	flex: 1;
+}
+
+.contact-form h3{
+	color: rgb(248, 245, 245);;
+	text-align: center;
+	font-size: 35px;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+
+.contact-form .text-box{
+	background: rgb(240, 233, 233);
+	color: rgb(7, 7, 7);
+	border: none;
+	width: calc(50% = 10px);
+	height: 50px;
+	padding: 12px;
+	font-size: 15px;
+	border-radius: 5px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+	opacity: 0.9;
+}
+
+.contact-form .text-box:first-child{
+	margin-right: 15px;
+}
+
+.contact-form textarea{
+  background: rgb(240, 233, 233);
+	color: black;
+	border: none;
+	width: 100%;
+	padding: 12px;
+	font-size: 15px;
+	min-height: 200px;
+	max-height: 400px;
+	resize: vertical;
+	border-radius: 5px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 1.0);
+	margin-bottom: 20px;
+	opacity: 0.9;
+}
+
+.contact-form .send-btn{
+	float: right;
+	background: #2E94E3;
+	color: #fff;
+	border: none;
+	width: 120px;
+	height: 40px;
+	font-size: 600;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.contact-form .send-btn:hover{
+	background: #0582E3;
+}
+
+@media screen and (max-width: 950px){
+	.contact-section{
+		flex-direction: column;
+	}
+
+	.contact-info, .contact-form{
+		margin: 30px 50px;
+	}
+
+	.contact-form h3{
+		font-size: 30px;
+	}
+	.contact-form .text-box{
+		width: 100%;
+	}
+}
+
+/*css for alert messages*/
+
+.alert-success{
+	z-index: 1;
+	background: #D4EDDA;
+	font-size: 15px;
+	padding: 20px 40px;
+	min-width: 420px;
+	position: fixed;
+	right: 0;
+	top: 10px;
+	border-left: 8px solid #3AD66E;
+	border-radius: 4px;
+}
+
+.alert-error{
+	z-index: 1;
+	background: #FFF3CD;
+	font-size: 15px;
+	padding: 20px 40px;
+	min-width: 420px;
+	position: fixed;
+	right: 0;
+	top: 10px;
+	border-left: 8px solid #FFA502;
+	border-radius: 4px;
+}
+  </style>
+  <script> 
+    $(document).ready(function(){
+      $("#flip").click(function(){
+        $("carousel-inner").slideToggle("slow");
+      });
+    });
+    </script>
+    <script>
+      $(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+
+function validateForm() {
+  let x = document.forms["contact"]["name"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+    </script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-expand-lg navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage"><img src="images/logo.jpg"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#about">ABOUT US</a></li>
+        <li><a href="#what">WHAT WE DO</a></li>
+        <li><a href="#partner">PARTNERS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+       <li> <a href="donation.html" type="button">Donate</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="images/home-slider-1.jpg" alt="New York" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>New York</h3>
+          <p>The atmosphere in New York is lorem ipsum.</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="images/home-slider-2.jpg" alt="Chicago" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>WE HELP ALL PEOPLE AROUND THE WORLD</h3>
+          <p>Thank you, Chicago - A night we won't forget.</p>
+        </div>      
+      </div>
+    </div>
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+<div id="about">
+    <div class="container text-center">
+<h1>ABOUT US</h1>
+      <br>
+      <br>
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="col-sm-4">
+          <a href="#demo" data-toggle="collapse">
+            <img src="images/founder1.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+          </a>
+          <div id="demo" class="collapse">
+            <h2>Rajeshree Das Dutta</h2>
+        <h2>Director</h2>
+        <p>I love to work in a stimulating environment where I can apply &amp; enhance my knowledge, my skill
+           in profession and to serve the organization to the best of my efforts and thereby securing a
+           promising position that offers both a challenge and a good opportunity for growth.</p><br><br>
+          </div>
+        </div>
+        <div class="col-sm-4">
+         
+          <a href="#demo2" data-toggle="collapse">
+            <img src="images/founder2.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+          </a>
+          <div id="demo2" class="collapse">
+            <h2>Ian Joseph</h2>
+         <h2>Director</h2>
+        <p>NGO, India was officially registered in Delhi and Pearson became a Trustee of the organisation and a key member of its Governing Board. One of the founder members of HelpAge International, Philip Jackson, joined HelpAge India the same year as its first Chief Executive.</p><br>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <a href="#demo3" data-toggle="collapse">
+            <img src="images/founder3.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+          </a>
+          <div id="demo3" class="collapse">
+            <h2>Aniket Nayak</h2>
+            <h2>Director</h2>
+           <p>NGo, transfers knowledge to village communities through education and empowerment. NGO strongly believes that collective participatory action is required for balanced and sustainable community development.NGO is partnered with international non-government organisations (NGO’s),Charities Aid Foundation, </p>
+           <br>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div><br><br>
+<div id="what">
+    <div class="container text-center">
+        <h1>WHAT WE DO</h1><br>
+        <h3 >What we have created</h3>
+      </div>
+      <div class="container">
+        <div class="row text-center ">
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <p><strong>— We Find & Fund</strong></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+      eiusmod incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud.</p>
+            </div>
+          </div>
+          <div class="col-sm-4"> 
+            <div class="thumbnail">
+          
+              <p><strong>— We Build Networks</strong></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+      eiusmod incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud.</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+             
+              <p><strong>— We Strengthen</strong></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+      eiusmod incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud.</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+             
+              <p><strong>— We Educate</strong></p>
+              <p>YLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+      eiusmod incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud.</p>
+            </div>
+          </div>
+      <div class="col-sm-4">
+            <div class="thumbnail">
+             
+              <p><strong>— We Provide Care</strong></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+      eiusmod incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud.</p>
+            </div>
+          </div>
+      <div class="col-sm-4">
+            <div class="thumbnail">
+             
+              <p><strong>— We Consult</strong></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+      eiusmod incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div id="partner">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+        <div class="container text-center">
+            <h1>PARTNERS</h1><br>
+            
+            <h3 >OUR SPONSERS</h3>
+            <section class="customer-logos sliders">
+      <div class="slide"><img src="images/image2.png"></div>
+      <div class="slide"><img src="images/image3.png"></div>
+      <div class="slide"><img src="images/image4.png"></div>
+      <div class="slide"><img src="images/image5.png"></div>
+      <div class="slide"><img src="images/image6.jpeg"></div>
+      <div class="slide"><img src="images/image7.jpeg" width="50"></div>
+      <div class="slide"><img src="images/image8.jpeg"></div>
+      <div class="slide"><img src="images/image9.jpg"></div>
+   </section>
+            </div>
+            </div><br><br>
+    <div id="contact">
+      <div class="container text-center">
+        <h1>CONTACT US</h1><br>
+      <div class="contact-section">
+        <div class="contact-info">
+          <div><i class="fas fa-map-marker-alt"></i>Pathanwadi, Malad(E), Mumbai-400097</div>
+          <div><i class="fas fa-envelope"></i>any@gmail.com</div>
+          <div><i class="fas fa-phone"></i>+91 1111111111</div>
+          <div><i class="fas fa-clock"></i>Mon - Fri 8:00 AM to 5:00 PM</div>
+        </div>
+        <div class="contact-form">
+          <form class="contact" action="contact.php" method="post">
+           <input type="text" name="name" class="text-box" placeholder="Your Name" required>
+           <input type="email" name="email" class="text-box" placeholder="Your email" required>
+          <textarea name="message" class="message-area" row="5" placeholder="Your message" required></textarea>
+            <input type="submit" name="submit" class="send-btn"><a href ="index.html"></a>
+          </form>
+        </div>
+      </div>
+      <div>
+        </div>
+        <div>
+    </div>
+
+       
+<!-- #################### FO0TER ########################## -->
+    <footer class="pt-4 my-md-4 pt-md-5 border-top">
+      <div class="row">
+        <div class="col-12 col-md">
+          
+          <small class="d-block mb-3 text-muted">&copy; Right as per 2017-2020</small>
+        </div>
+        <div class="col-lg-3 ">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled text-small">
+            
+            <li><a class="text-muted" href="http://halftech.epizy.com/">Budhha Nagar Marve X Road Malawani Malad West <br> Mumbai - 400095</a></li>
+            <li><a class="text-muted" href="http://halftech.epizy.com/">Contact No : 1111111111</a></li>
+            <li><a class="text-muted" href="http://vimiratech.epizy.com/">Gmail: mus@gmail.com</a></li>
+            
+            
+          </ul>
+        </div>
+       
+    
+      </div>
+    </footer>
+    </div>
+    
+        </body>
+</html>
+    
+
+

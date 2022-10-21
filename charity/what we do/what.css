@@ -1,0 +1,23 @@
+
+
+.button2{
+    padding:8px;
+    background-color:white;
+    font-size: 15px;
+    border-radius: 08px;
+    position:absolute;
+    left:10px;
+    top:92%;
+  }
+  
+  .button1{
+    padding:8px;
+    background-color:white;
+    font-size: 15px;
+    border-radius: 08px;
+    position:absolute;
+    right:08px;
+    top:92%;
+  }
+
+  

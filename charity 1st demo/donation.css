@@ -1,0 +1,133 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+  background-image: url(images/3.jpg);
+}
+
+.payment{
+  background: rgb(240, 166, 70);
+background: linear-gradient(171deg, rgba(252,203,244,1) 0%, rgba(253,24,37,1) 99%);
+max-width: 360px;
+  margin: 80px auto;
+  height: auto;
+  padding: 35px;
+  padding-top: 70px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.payment h2{
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  color: darkcyan;
+
+}
+
+.form .label{
+  display: block;
+  color: #555555;
+  margin-bottom: 6px;
+}
+
+.input{
+  padding: 13px 0px 13px 25px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #dddddd;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  outline: none;
+  font-size: 16px;
+  color: #555555;
+}
+
+.card-grp{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-item{
+  width: 48%;
+}
+
+.space{
+  margin-bottom: 20px;
+}
+
+.icon-relative{
+  position: relative;
+}
+
+.icon-relative .fas,
+.icon-relative .far{
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  font-size: 20px;
+  color: #555555;
+}
+
+.donate-button{
+  margin-top: 40px;
+  background: seagreen;
+  padding: 12px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.payment-logo{
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  text-align: center;
+  line-height: 85px;
+  background: rgb(231, 103, 210);
+background: linear-gradient(171deg, rgba(252,203,244,1) 0%, rgba(24,44,253,1) 99%);
+  
+}
+
+.payment-logo:before{
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 90px;
+  height: 90px;
+  background: #2196F3;
+  background-image: url(images/logo.jpg);
+  background-repeat: round;
+  border-radius: 70%;
+}
+
+
+
+.button2{
+  padding:8px;
+  background-color:blue;
+  font-size: 15px;
+  border-radius: 08px;
+  left:10px;
+}
+
+.button1{
+  padding:8px;
+  background-color:blue;
+  font-size: 15px;
+  border-radius: 08px;
+  position:absolute;
+  right:10px;
+}
